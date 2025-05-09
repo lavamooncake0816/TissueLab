@@ -2,6 +2,8 @@
 
 This project extends a whole slide image (WSI) viewer to visualize segmentation results, built with Electron, Next.js, TypeScript, and FastAPI.
 
+[Video Demo](https://drive.google.com/file/d/16SmVwS373M-tc1lJVAq-eL0BMCfnfOVt/view?usp=sharing)
+
 ## Features
 
 - WSI viewing with support for zooming and panning
