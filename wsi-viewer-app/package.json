@@ -1,0 +1,64 @@
+{
+  "name": "wsi-viewer-app",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "electron-dev": "concurrently \"npm run dev\" \"electron .\"",
+    "electron-build": "next build && electron-builder"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.7.17",
+    "@heroicons/react": "^2.1.1",
+    "axios": "^1.6.2",
+    "electron-is-dev": "^2.0.0",
+    "lodash": "^4.17.21",
+    "next": "^15.3.2",
+    "openseadragon": "^4.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-query": "^3.39.3",
+    "swr": "^2.2.4",
+    "ws": "^8.14.2"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.16",
+    "@types/node": "^20.17.46",
+    "@types/openseadragon": "^2.4.8",
+    "@types/react": "^18.3.21",
+    "@types/react-dom": "^18.2.14",
+    "autoprefixer": "^10.4.21",
+    "concurrently": "^8.2.2",
+    "electron": "^27.3.11",
+    "electron-builder": "^24.13.3",
+    "eslint": "^8.52.0",
+    "eslint-config-next": "^13.5.4",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.8.3"
+  },
+  "build": {
+    "appId": "com.wsi-viewer-app",
+    "productName": "WSI Viewer App",
+    "mac": {
+      "category": "public.app-category.medical"
+    },
+    "files": [
+      "electron/**/*",
+      ".next/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "public"
+    }
+  },
+  "description": "A modern Whole Slide Image (WSI) viewer application for visualizing segmentation results. Built with Electron, Next.js, TypeScript, and Tailwind CSS.",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
